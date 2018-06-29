@@ -1,8 +1,13 @@
 package com.km.admin.model;
 
+import java.util.List;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import lombok.Data;
 import lombok.ToString;
 
@@ -34,4 +39,11 @@ public class SysAcl extends BaseModel {
 
   /** 权限类型 : 1: 菜单 2: 按钮  3: 其他 **/
   private int type;
+
+  /*** 权限 与 角色的关系映射 ***/
+
+  /** 权限列表 **/
+  @ManyToMany(fetch = FetchType.EAGER)
+  @JoinTable(name="sysRoleAcl",joinColumns = {@JoinColumn(name="aclId")}, inverseJoinColumns = {@JoinColumn(name="roleId")})
+  private List<SysRole> roleList;
 }

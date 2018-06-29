@@ -300,6 +300,10 @@ public class ApplicationTests {
 
 测试完成。OK。
 
+### 疑问点:
+
+配置mybatis一般都配置`MapperScan`,这里我并没有配置，但是程序是可用的。暂时还不清楚为什么。
+
 ### 总结
 
 目前看，Jpa相对简单些。这个项目里我打算使用JPA。
