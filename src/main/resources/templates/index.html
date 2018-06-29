@@ -8,26 +8,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" th:href="@{bootstrap/bootstrap.min.css}"/>
+  <link rel="stylesheet" th:href="@{static/bootstrap/bootstrap.min.css}"/>
   <style type="text/css">
-    .form-sign{
-      max-width: 330px;
-      padding:15px;
-      margin: 140px auto;
-    }
-    input{
-      margin-bottom: 3px;
-    }
+       body{
+         background: url("/static/images/bg01.jpg") repeat fixed center;
+       }
+
+
+
+
+
+
+
   </style>
   <title>登录</title>
 </head>
-<body>
-<!--
+<body >
 <div class="container">
 
-  <h2 class="text-center" style="margin-top: 100px">后台管理系统</h2>
+  <h3 class="text-center" style="margin-top: 180px">后台管理系统</h3>
 
-  <form style="margin-top: 98px;">
+  <form style="margin-top: 148px;">
     <div class="form-group">
       <div class="col-md-4 offset-md-4">
         <input type="text" class="form-control" id="username" placeholder="用户名">
@@ -51,24 +52,11 @@
   </form>
 
 </div>
--->
-
-<div class="container">
-  <form class="form-sign">
-      <h2 class="form-sign-heading">欢迎登录</h2>
-      <input type="text" class="form-control" placeholder="用户名" required autofocus/>
-      <input type="password" class="form-control" placeholder="密码" required/>
-      <label class="check-box">
-        <input type="checkbox" value="remember-me" > 记住我
-      </label>
-      <button class="btn btn-lg btn-primary btn-block" type="submit">登录</button>
-  </form>
-</div>
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script th:src="@{bootstrap/jquery-1.9.1.min.js}"></script>
-<script th:src="@{bootstrap/popper.min.js}"></script>
-<script th:src="@{bootstrap/bootstrap.min.js}"></script>
+<script th:src="@{static/bootstrap/jquery-1.9.1.min.js}"></script>
+<script th:src="@{static/bootstrap/popper.min.js}"></script>
+<script th:src="@{static/bootstrap/bootstrap.min.js}"></script>
 </body>
 </html>
